@@ -6,17 +6,19 @@
     <title>LinguaBlog - Blogging Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col bg-purple-950">
     <!-- Header/Navigation -->
-    <header class="bg-purple-950 shadow-sm py-4 px-10 border-b">
+    <header
+      class="bg-purple-950 shadow-sm py-4 px-10 border-b border-purple-900 relative z-20"
+    >
       <div class="container mx-auto flex justify-between items-center">
         <h1 class="text-2xl font-bold gradient-text">LinguaBlog</h1>
-        <nav class="hidden md:flex space-x-8">
+        <nav class="hidden md:flex space-x-7">
           <a href="#" class="text-gray-200 hover:text-white font-medium py-2"
             >Home</a
           >
@@ -31,42 +33,43 @@
           >
           <a
             href="#"
-            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-2 rounded"
+            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
             >Log In</a
           >
           <a
             href="#"
-            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-2 rounded"
+            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
             >Sign Up</a
           >
         </nav>
       </div>
     </header>
 
+    <!-- Hero Section -->
     <section
-      class="flex flex-col md:flex-row items-center justify-between px-10 py-6 bg-purple-950"
+      class="relative overflow-hidden flex flex-col md:flex-row items-center justify-between px-10 py-6 bg-purple-950"
     >
-      <!-- Right: Text -->
-      <div class="w-full md:w-1/2 text-center md:text-left">
+      <!-- Content -->
+      <div class="relative z-10 w-full md:w-1/2 text-center md:text-left left-10 ">
         <h2 class="text-5xl font-bold mb-4 text-white">
-          <span class="block py-2">Explore</span>
-          <span class="block py-2">Thoughts</span>
-          <span class="block py-2">Across Borders</span>
+          <span class="block py-2 tracking-widest">Explore</span>
+          <span class="block py-2 tracking-widest">Thoughts</span>
+          <span class="block py-2 tracking-widest">Across Borders</span>
         </h2>
         <p class="mb-6 text-lg text-gray-200">
-          Discover imerging blogs from around the globe, written in multiple
+          Discover emerging blogs from around the globe, written in multiple
           languages
         </p>
         <div class="flex space-x-8">
-          <a href="/"
-            ><button
+          <a href="/">
+            <button
               class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition duration-300 shadow-lg"
             >
               READ BLOG
             </button>
           </a>
-          <a href="/"
-            ><button
+          <a href="/">
+            <button
               class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition duration-300 shadow-lg"
             >
               CREATE BLOG
@@ -74,19 +77,23 @@
           </a>
         </div>
       </div>
-      <!-- Left: Image -->
-      <div class="w-full md:w-1/2 mb-8 md:mb-0 flex justify-center">
+
+      <!-- Image -->
+      <div class="relative inline-flex justify-center right-10">
+        <div
+          class="absolute inset-0 bg-purple-700/20 rounded-full blur-xl"
+        ></div>
         <img
-          id="homeimg1"
           src="assests/homeillustration1.png"
           alt="Blog Illustration"
+          class="relative z-10 max-w-md"
         />
       </div>
     </section>
 
     <!-- Featured Blogs Section -->
-    <section class="py-16 px-10 bg-purple-950">
-      <div class="container mx-auto">
+    <section class="relative py-16 px-10 bg-purple-950">
+      <div class="relative z-10 container mx-auto">
         <h2 class="text-3xl font-bold text-center mb-12 text-white">
           MOST VIEWED BLOGS
         </h2>
@@ -94,7 +101,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Blog Card 1 -->
           <div
-            class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border"
+            class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200"
           >
             <div
               class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
@@ -110,21 +117,21 @@
               <p class="text-sm text-gray-500 mb-4">Tanvi Mane</p>
               <p class="text-gray-600">
                 Discover inspiring things from research to guide, written in
-                merged languages... solid state
+                merged languages
               </p>
             </div>
           </div>
 
           <!-- Blog Card 2 -->
           <div
-            class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border"
+            class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-200"
           >
             <div
               class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
             >
               <img
                 src="assests/nature-blog.jpeg"
-                alt="travel-blog"
+                alt="nature-blog"
                 class="w-full h-full object-cover"
               />
             </div>
@@ -133,32 +140,32 @@
               <p class="text-sm text-gray-500 mb-4">Nikhil Chaughule</p>
               <p class="text-gray-600">
                 Discover inspiring things from research to guide, written in
-                merged languages... solid state
+                merged languages
               </p>
             </div>
           </div>
 
           <!-- Blog Card 3 -->
           <div
-            class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border"
+            class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-200"
           >
             <div
               class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
             >
               <img
                 src="assests/technology-blog.jpeg"
-                alt="travel-blog"
+                alt="technology-blog"
                 class="w-full h-full object-cover"
               />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2 text-gray-800">
-                technology Blog
+                Technology Blog
               </h3>
               <p class="text-sm text-gray-500 mb-4">Kunal Kavathekar</p>
               <p class="text-gray-600">
                 Discover inspiring things from research to guide, written in
-                merged languages... solid state
+                merged languages
               </p>
             </div>
           </div>
@@ -166,10 +173,11 @@
       </div>
     </section>
 
-    <section class="py-16 px-10 bg-purple-950">
+    <!-- CTA Section -->
+    <section class="relative py-16 px-10 bg-purple-950">
       <!-- Gradient Background Section -->
       <div
-        class="bg-gradient-to-r from-blue-500 to-purple-600 py-20 px-6 text-center text-white rounded-xl"
+        class="relative z-10 bg-gradient-to-r from-blue-500 to-purple-600 py-20 px-6 text-center text-white rounded-xl"
       >
         <div class="container mx-auto">
           <h1 class="text-xl md:text-2xl mb-8">ARE YOU READY?</h1>
@@ -186,8 +194,19 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-purple-700 to-purple-950 text-white py-12 px-10 mt-auto text-center">
-      <div class="container mx-auto grid grid-cols-1 md:grid-cols-4">
+    <footer
+      class="relative bg-gradient-to-r from-purple-700 to-purple-950 text-white py-12 px-10 mt-auto text-center"
+    >
+      <!-- Glowing Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-blue-400 opacity-10 blur-xl"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-4"
+      >
         <div>
           <h3 class="text-xl font-bold mb-4">LinguaBlog</h3>
         </div>
@@ -220,7 +239,7 @@
       </div>
 
       <div
-        class="container mx-auto mt-12 pt-6 border-t border-gray-700 text-center text-gray-400"
+        class="relative z-10 container mx-auto mt-12 pt-6 border-t border-gray-700 text-center text-gray-400"
       >
         <p>&copy; 2025 LinguaBlog. All rights reserved.</p>
       </div>
