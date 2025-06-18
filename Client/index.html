@@ -10,10 +10,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/headerMenu.js"></script>
   </head>
   <body class="min-h-screen flex flex-col bg-purple-950">
     <!-- Header/Navigation -->
-    <header
+    <!-- <header
       class="bg-purple-950 shadow-sm py-4 px-10 border-b border-purple-900 relative z-20"
     >
       <div class="container mx-auto flex justify-between items-center">
@@ -49,6 +50,106 @@
           >
         </nav>
       </div>
+    </header> -->
+
+    <header
+      class="bg-purple-950 shadow-sm py-4 px-4 sm:px-10 border-b border-purple-900 relative z-20"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo/Brand -->
+        <h1 class="text-2xl font-bold gradient-text">LinguaBlog</h1>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-7">
+          <a
+            href="index.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Home</a
+          >
+          <a href="#" class="text-gray-200 hover:text-white font-medium py-2"
+            >Explore</a
+          >
+          <a
+            href="aboutus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >About</a
+          >
+          <a
+            href="contactus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
+            >Log In</a
+          >
+          <a
+            href="#"
+            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
+            >Sign Up</a
+          >
+        </nav>
+
+        <!-- Mobile menu button - Now on the right side -->
+        <button
+          id="mobileMenuButton"
+          class="md:hidden text-gray-200 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobileMenu" class="mobile-menu md:hidden bg-purple-950">
+        <div class="container mx-auto px-4 pt-2 pb-4 space-y-3">
+          <a
+            href="index.html"
+            class="block text-gray-200 hover:text-white font-medium py-2"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block text-gray-200 hover:text-white font-medium py-2"
+            >Explore</a
+          >
+          <a
+            href="aboutus.html"
+            class="block text-gray-200 hover:text-white font-medium py-2"
+            >About</a
+          >
+          <a
+            href="contactus.html"
+            class="block text-gray-200 hover:text-white font-medium py-2"
+            >Contact</a
+          >
+          <div class="flex space-x-4 pt-2">
+            <a
+              href="#"
+              class="flex-1 text-center text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
+              >Log In</a
+            >
+            <a
+              href="#"
+              class="flex-1 text-center text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
+              >Sign Up</a
+            >
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
@@ -57,12 +158,12 @@
     >
       <!-- Content -->
       <div
-        class="relative z-10 w-full md:w-1/2 text-center md:text-left left-10"
+        class="relative z-10 w-full md:w-1/2 text-center md:text-left md:left-10"
       >
-        <h2 class="text-5xl font-bold mb-4 text-white">
-          <span class="block py-2 tracking-widest">Explore</span>
-          <span class="block py-2 tracking-widest">Thoughts</span>
-          <span class="block py-2 tracking-widest">Across Borders</span>
+        <h2 class="text-3xl font-bold mb-4 text-white lg:text-5xl">
+          <span class="block tracking-widest lg:py-2">Explore</span>
+          <span class="block tracking-widest lg:py-2">Thoughts</span>
+          <span class="block tracking-widest lg:py-2">Across Borders</span>
         </h2>
         <p class="mb-6 text-lg text-gray-200">
           Discover emerging blogs from around the globe, written in multiple
@@ -71,14 +172,14 @@
         <div class="flex space-x-8">
           <a href="/">
             <button
-              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition duration-300 shadow-lg"
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs lg:text-base font-bold py-3 px-8 rounded-full hover:opacity-90 transition duration-300 shadow-lg"
             >
               READ BLOG
             </button>
           </a>
           <a href="writeblog.html">
             <button
-              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition duration-300 shadow-lg"
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs lg:text-base font-bold py-3 px-8 rounded-full hover:opacity-90 transition duration-300 shadow-lg"
             >
               CREATE BLOG
             </button>
@@ -87,14 +188,14 @@
       </div>
 
       <!-- Image -->
-      <div class="relative inline-flex justify-center right-10">
+      <div class="relative inline-flex justify-center right-10 hidden md:block">
         <div
           class="absolute inset-0 bg-purple-700/20 rounded-full blur-xl"
         ></div>
         <img
           src="assests/homeillustration1.png"
           alt="Blog Illustration"
-          class="relative z-10 w-80"
+          class="relative z-10 w-48 lg:w-64 xl:w-80"
         />
       </div>
     </section>

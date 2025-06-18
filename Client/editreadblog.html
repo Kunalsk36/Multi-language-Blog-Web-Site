@@ -71,7 +71,7 @@
           <div class="w-full max-w-4xl">
             <!-- Language Selection Toolbar -->
             <div class="mb-6">
-              <div class="flex justify-between mb-8">
+              <div class="flex flex-col justify-between mb-8 md:flex-row">
                 <div>
                   <label class="block font-medium text-gray-800 mb-4"
                     >Select Blog Language:</label
@@ -160,8 +160,8 @@
                 </div>
               </div>
 
-              <div class="flex space-x-8">
-                <div class="w-1/2">
+              <div class="flex md:space-x-8 flex-col md:flex-row">
+                <div class="w-full md:w-1/2">
                   <!-- Blog Title -->
                   <h1 class="text-4xl font-bold text-gray-800 mb-4">
                     Technology Blog
@@ -191,7 +191,7 @@
                     Last updated: December 1, 2003
                   </div>
                 </div>
-                <div class="w-1/2 h-[200px] overflow-hidden">
+                <div class="w-full md:w-1/2 h-[200px] overflow-hidden">
                   <img
                     src="assests/technology-blog.jpeg"
                     alt="blog-cover"
@@ -314,9 +314,27 @@
               <!-- Comment 1 -->
               <div class="flex space-x-4">
                 <div
+                  class="w-10 h-10 rounded-full bg-purple-700 flex-shrink-0 flex items-center justify-center text-white font-bold"
+                >
+                  NK
+                </div>
+                <div class="bg-gray-100 rounded-xl p-4 flex-grow">
+                  <div class="mb-2">
+                    <h4 class="font-medium text-gray-800">Nikhil C.</h4>
+                  </div>
+                  <p class="text-gray-600">
+                    Great article! Really enjoyed reading about the future of
+                    technology.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Comment 2 -->
+              <div class="flex space-x-4">
+                <div
                   class="w-10 h-10 rounded-full bg-blue-700 flex-shrink-0 flex items-center justify-center text-white font-bold"
                 >
-                  KK
+                  SK
                 </div>
                 <div class="bg-gray-100 rounded-xl p-4 flex-grow">
                   <div class="mb-2">

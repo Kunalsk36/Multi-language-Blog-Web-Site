@@ -30,6 +30,15 @@ body {
   }
 }
 
+.mobile-menu {
+  transition: all 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+.mobile-menu.open {
+  max-height: 500px;
+}
+
 /* aboutus page style */
 .team-card:hover {
   transform: translateY(-5px);
